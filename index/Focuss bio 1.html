@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focuss</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #d9d9d9;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    header {
+      position: relative;
+      height: 220px;
+      background: 
+        linear-gradient(rgba(217,217,217,0.55), rgba(217,217,217,0.55)),
+        url('https://i.pinimg.com/736x/a9/9d/98/a99d980045e09210d81e19c678bacb14.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding-left: 40px;
+      color: black;
+      font-size: 42px;
+      font-weight: bold;
+      filter: brightness(0.7);
+      margin-bottom: 30px; /* giảm khoảng cách giữa header và phần chữ */
+    }
+
+    /* Phần chính */
+    .section {
+      text-align: center;
+      position: relative;
+      margin-top: -20px; /* kéo cụm chữ gần hơn header */
+      padding-top: 20px; /* thêm khoảng cách trên */
+      padding-bottom: 60px; /* thêm khoảng cách dưới để tách khỏi ô đầu tiên */
+    }
+
+    .section h1 {
+      margin: 6px 0;
+      opacity: 0;
+      animation: fadeInDown 1.2s ease forwards;
+    }
+
+    .section h1:nth-child(1) { animation-delay: 0.3s; }
+    .section h1:nth-child(2) { animation-delay: 0.8s; }
+    .section h1:nth-child(3) { animation-delay: 1.3s; }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Container các ô sản phẩm */
+    .product-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 100px;
+      transition: all 0.3s ease;
+    }
+
+    /* Ô trắng */
+    .white-box {
+      width: 65%;
+      margin: 0 auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      padding: 40px;
+      position: relative;
+      text-decoration: none;
+      display: block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+      cursor: pointer;
+    }
+
+    .white-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+      z-index: 10;
+    }
+
+    .product-container:hover .white-box:not(:hover) {
+      transform: scale(0.95);
+      opacity: 0.7;
+    }
+
+    .gray-square {
+      position: absolute;
+      top: -40px;
+      left: 60px;
+      width: 200px;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      border: 3px solid black;
+      z-index: 5;
+      border-radius: 6px;
+    }
+
+    .white-box-content {
+      text-align: left;
+      margin-left: 300px;
+    }
+
+    .white-box-content h3 {
+      margin: 0;
+      color: #111;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <header>FOCUSS</header>
+
+  <div class="section">
+    <h1>Collaboration</h1>
+    <h1>&</h1>
+    <h1>Everything in my setup</h1>
+
+    <div class="product-container">
+      <a class="white-box" href="https://boxtstore.vn/products/pad-chuot-gaming-boxt99-soft-control-chat-lieu-vai-type99?spId=345" target="_blank">
+        <div class="gray-square" style="background-image: url('https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-mdrhj2uyn835fd@resize_w450_nl.webp');"></div>
+        <div class="white-box-content">
+          <h3>Pad Chuột Gaming BOXT99 Soft Control Chất Liệu Type99 - Lót Chuột BOXTSTORE</h3>
+        </div>
+      </a>
+
+      <a class="white-box" href="https://truthear.com/products/zero-red" target="_blank">
+        <div class="gray-square" style="background-image: url('https://cdn.prod.website-files.com/63bcdfa5158ffcd72a7a8d8e/663c80e2f55010509b7ca3f6_red.jpg');"></div>
+        <div class="white-box-content">
+          <h3>TRUTHEAR x Crinacle ZERO:RED In-ear Monitor</h3>
+        </div>
+      </a>
+
+      <a class="white-box" href="https://attackshark.com/products/attack-shark-x68-he-rapid-trigger-keyboard-magnetic-switch?srsltid=AfmBOoquflCwDv3UDdO0OCF95wYUVPkoy4dO0awgDNoOaB7OAKjC-QJG" target="_blank">
+        <div class="gray-square" style="background-image: url('https://attackshark.com/cdn/shop/files/06_13d08781-1abb-49e0-b2f9-bf6a453c016c.jpg?v=1752039873&width=800');"></div>
+        <div class="white-box-content">
+          <h3>ATTACK SHARK X68 HE Rapid Trigger Keyboard Magnetic Switch</h3>
+        </div>
+      </a>
+
+      <a class="white-box" href="https://www.maono.com/products/recording-microphone-kit-with-xlr-to-3-5mm-cable-maono-au-pm360tr?srsltid=AfmBOoo7uJnT15bSqMphKIHH499yEebN-FDMdnk8J5weIVn8NxFEiRq0" target="_blank">
+        <div class="gray-square" style="background-image: url('https://www.maono.com/cdn/shop/files/MaonoPM3603.5mmmicrophone_60-600.png?v=1692699466&width=800');"></div>
+        <div class="white-box-content">
+          <h3>MAONO AU-PM36TR</h3>
+        </div>
+      </a>
+
+      <a class="white-box" href="https://hitscan.com/products/hyperlight?srsltid=AfmBOoo7f9zgdewdoafC50Zs3sMVw7ofHh-Llmjtw67cO_fg8CyImdI3" target="_blank">
+        <div class="gray-square" style="background-image: url('https://www.maxgaming.com/bilder/artiklar/zoom/32162_1.jpg?m=1726577089');"></div>
+        <div class="white-box-content">
+          <h3>HITSCAN HYPERLIGHT</h3>
+        </div>
+      </a>
+
+      <a class="white-box" href="https://wallhack.com/en-int/products/sp-004-white" target="_blank">
+        <div class="gray-square" style="background-image: url('https://wallhack.com/cdn/shop/files/GlassPad-SP-004-White-Image1.webp?v=1751990350&width=1800');"></div>
+        <div class="white-box-content">
+          <h3>WALLHACK SP-004</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
